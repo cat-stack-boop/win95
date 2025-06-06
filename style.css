@@ -21,6 +21,15 @@ body {
     margin-bottom: 10px;
 }
 
+.icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.icon figcaption {
+    margin-top: 4px;
+}
+
 #taskbar {
     position: absolute;
     left: 0;
@@ -42,4 +51,5 @@ body {
     border-right-color: #404040;
     margin-left: 5px;
     cursor: pointer;
+    font: inherit;
 }
