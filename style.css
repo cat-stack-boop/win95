@@ -43,3 +43,24 @@ body {
     margin-left: 5px;
     cursor: pointer;
 }
+
+#start-menu {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 200px;
+    background: #C0C0C0;
+    border: 2px solid #fff;
+    border-bottom-color: #404040;
+    border-right-color: #404040;
+    display: none;
+}
+
+.menu-item {
+    padding: 5px 10px;
+}
+
+.menu-item:hover {
+    background: #000080;
+    color: #fff;
+}
