@@ -38,13 +38,18 @@ body {
     box-shadow: 4px 4px 0 #404040;
     width: 300px;
     height: 200px;
+    box-sizing: border-box;
 }
 
 .title-bar {
     background: #000080;
     color: #fff;
-    padding: 2px;
+    padding: 2px 4px;
     font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
 }
 
 .window-content {
@@ -114,24 +119,6 @@ body {
 }
 
 /* Basic window styling */
-.window {
-    position: absolute;
-    width: 300px;
-    background: #C0C0C0;
-    border: 2px solid #000;
-    box-sizing: border-box;
-}
-
-.title-bar {
-    background: #000080;
-    color: white;
-    padding: 2px 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: move;
-}
-
 .close-button {
     width: 16px;
     height: 16px;
@@ -143,7 +130,3 @@ body {
     padding: 0;
 }
 
-.window-content {
-    padding: 10px;
-
-}
