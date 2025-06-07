@@ -100,3 +100,37 @@ body {
     background: #000080;
     color: #fff;
 }
+
+/* Basic window styling */
+.window {
+    position: absolute;
+    width: 300px;
+    background: #C0C0C0;
+    border: 2px solid #000;
+    box-sizing: border-box;
+}
+
+.title-bar {
+    background: #000080;
+    color: white;
+    padding: 2px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+.close-button {
+    width: 16px;
+    height: 16px;
+    background: #C0C0C0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 14px;
+    padding: 0;
+}
+
+.window-content {
+    padding: 10px;
+}
