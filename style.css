@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'MS Sans Serif', sans-serif;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
     background: #008080;
 }
 
@@ -16,9 +16,40 @@ body {
 .icon {
     width: 80px;
     height: 70px;
-    color: white;
+    color: #000;
+    background: #C0C0C0;
     text-align: center;
     margin-bottom: 10px;
+    border: 2px solid #fff;
+    border-bottom-color: #404040;
+    border-right-color: #404040;
+    box-shadow: 2px 2px 0 #404040;
+    padding-top: 8px;
+    cursor: default;
+    font-size: 12px;
+}
+
+.window {
+    position: absolute;
+    background: #C0C0C0;
+    border: 2px solid #fff;
+    border-bottom-color: #404040;
+    border-right-color: #404040;
+    box-shadow: 4px 4px 0 #404040;
+    width: 300px;
+    height: 200px;
+}
+
+.title-bar {
+    background: #000080;
+    color: #fff;
+    padding: 2px;
+    font-size: 12px;
+}
+
+.window-content {
+    padding: 10px;
+    font-size: 12px;
 }
 
 #taskbar {
@@ -29,7 +60,10 @@ body {
     height: 40px;
     background: #C0C0C0;
     border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #404040;
     border-bottom: 2px solid #404040;
+    box-shadow: 0 -2px 0 #808080 inset;
     display: flex;
     align-items: center;
 }
@@ -42,4 +76,61 @@ body {
     border-right-color: #404040;
     margin-left: 5px;
     cursor: pointer;
+    font-size: 12px;
+    box-shadow: 2px 2px 0 #404040;
+}
+
+#start-menu {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 200px;
+    background: #C0C0C0;
+    border: 2px solid #fff;
+    border-bottom-color: #404040;
+    border-right-color: #404040;
+    display: none;
+}
+
+.menu-item {
+    padding: 5px 10px;
+}
+
+.menu-item:hover {
+    background: #000080;
+    color: #fff;
+}
+
+/* Basic window styling */
+.window {
+    position: absolute;
+    width: 300px;
+    background: #C0C0C0;
+    border: 2px solid #000;
+    box-sizing: border-box;
+}
+
+.title-bar {
+    background: #000080;
+    color: white;
+    padding: 2px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+.close-button {
+    width: 16px;
+    height: 16px;
+    background: #C0C0C0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 14px;
+    padding: 0;
+}
+
+.window-content {
+    padding: 10px;
 }
