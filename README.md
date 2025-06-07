@@ -9,9 +9,6 @@ To try it out, open `index.html` in a web browser.
 
 - **Alt+S** – open the Start menu.
 - Use **Tab** to focus the Start button, then **Enter** or **Space** to activate it.
-=======
-This project is licensed under the MIT License. See the LICENSE file for details.
-
 
 ## Quick Start
 
@@ -25,7 +22,4 @@ npm run start
 
 The server uses `http-server` to serve files from the repository root. By default it listens on port 8080, so you can view the desktop at [http://localhost:8080](http://localhost:8080).
 
-=======
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-
