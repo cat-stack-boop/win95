@@ -1,0 +1,16 @@
+{
+  "name": "win95",
+  "version": "1.0.0",
+  "description": "This repository contains a very minimal mock desktop inspired by the look of Windows 95. It is implemented with HTML, CSS and a bit of JavaScript.",
+  "main": "script.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
