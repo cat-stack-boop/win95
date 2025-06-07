@@ -1,21 +1,13 @@
 const startButton = document.getElementById('start-button');
-
-
-startButton.addEventListener('click', function () {
-    alert('Start menu clicked!');
-
 const startMenu = document.getElementById('start-menu');
 
-startButton.addEventListener('click', function(event) {
+startButton.addEventListener('click', function (event) {
     event.stopPropagation();
-    if (startMenu.style.display === 'block') {
-        startMenu.style.display = 'none';
-    } else {
-        startMenu.style.display = 'block';
-    }
+    startMenu.style.display =
+        startMenu.style.display === 'block' ? 'none' : 'block';
 });
 
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     if (!startMenu.contains(event.target) && event.target !== startButton) {
         startMenu.style.display = 'none';
     }
