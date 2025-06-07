@@ -52,6 +52,15 @@ body {
     font-size: 12px;
 }
 
+.icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.icon figcaption {
+    margin-top: 4px;
+}
+
 #taskbar {
     position: absolute;
     left: 0;
@@ -76,6 +85,9 @@ body {
     border-right-color: #404040;
     margin-left: 5px;
     cursor: pointer;
+
+    font: inherit;
+
     font-size: 12px;
     box-shadow: 2px 2px 0 #404040;
 }
@@ -133,4 +145,5 @@ body {
 
 .window-content {
     padding: 10px;
+
 }

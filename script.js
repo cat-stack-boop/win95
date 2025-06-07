@@ -1,4 +1,9 @@
 const startButton = document.getElementById('start-button');
+
+
+startButton.addEventListener('click', function () {
+    alert('Start menu clicked!');
+
 const startMenu = document.getElementById('start-menu');
 
 startButton.addEventListener('click', function(event) {
@@ -73,4 +78,13 @@ document.getElementById('icon-computer').addEventListener('dblclick', function()
 
 document.getElementById('icon-trash').addEventListener('dblclick', function() {
     createWindow('Recycle Bin');
+
+});
+
+// Trigger start menu with Alt+S
+document.addEventListener('keydown', function (e) {
+    if (e.altKey && e.key.toLowerCase() === 's') {
+        startButton.focus();
+        startButton.click();
+    }
 });
