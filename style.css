@@ -25,8 +25,12 @@ body {
     border-right-color: #404040;
     box-shadow: 2px 2px 0 #404040;
     padding-top: 8px;
-    cursor: default;
+    cursor: pointer;
     font-size: 12px;
+}
+
+.icon:focus {
+    outline: 1px dotted #000;
 }
 
 .window {
@@ -97,6 +101,10 @@ body {
     box-shadow: 2px 2px 0 #404040;
 }
 
+#start-button:focus {
+    outline: 1px dotted #000;
+}
+
 #start-menu {
     position: absolute;
     left: 0;
@@ -128,5 +136,11 @@ body {
     font-weight: bold;
     line-height: 14px;
     padding: 0;
+}
+
+.close-button:hover,
+.close-button:focus {
+    background: #000080;
+    color: #fff;
 }
 
