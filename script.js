@@ -1,6 +1,12 @@
 const startButton = document.getElementById('start-button');
 const startMenu = document.getElementById('start-menu');
 
+let topZIndex = 1;
+
+function bringToFront(win) {
+    win.style.zIndex = ++topZIndex;
+}
+
 startButton.addEventListener('click', function (event) {
     event.stopPropagation();
     startMenu.style.display =
@@ -15,6 +21,7 @@ document.addEventListener('click', function (event) {
 
 function makeDraggable(win, handle) {
     handle.addEventListener('mousedown', function(e) {
+        bringToFront(win);
         const offsetX = e.clientX - win.offsetLeft;
         const offsetY = e.clientY - win.offsetTop;
 
@@ -38,6 +45,7 @@ function createWindow(title) {
     win.className = 'window';
     win.style.left = '100px';
     win.style.top = '100px';
+    bringToFront(win);
 
     const titleBar = document.createElement('div');
     titleBar.className = 'title-bar';
@@ -60,6 +68,8 @@ function createWindow(title) {
     win.appendChild(content);
 
     document.getElementById('desktop').appendChild(win);
+
+    win.addEventListener('mousedown', () => bringToFront(win));
 
     makeDraggable(win, titleBar);
 }

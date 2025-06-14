@@ -39,6 +39,7 @@ body {
     width: 300px;
     height: 200px;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .title-bar {
@@ -80,6 +81,7 @@ body {
     box-shadow: 0 -2px 0 #808080 inset;
     display: flex;
     align-items: center;
+    z-index: 50;
 }
 
 #start-button {
@@ -107,6 +109,7 @@ body {
     border-bottom-color: #404040;
     border-right-color: #404040;
     display: none;
+    z-index: 100;
 }
 
 .menu-item {
