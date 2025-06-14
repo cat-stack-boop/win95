@@ -144,3 +144,76 @@ body {
     color: #fff;
 }
 
+.window-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.minimize-button {
+    width: 16px;
+    height: 16px;
+    background: #C0C0C0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 14px;
+    padding: 0;
+}
+
+.minimize-button:hover,
+.minimize-button:focus {
+    background: #000080;
+    color: #fff;
+}
+
+#taskbar-apps {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.taskbar-app {
+    background: #C0C0C0;
+    border: 2px solid #fff;
+    border-bottom-color: #404040;
+    border-right-color: #404040;
+    margin: 0 2px;
+    padding: 2px 6px;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 #404040;
+}
+
+.taskbar-app.active {
+    border-top-color: #404040;
+    border-left-color: #404040;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    box-shadow: none;
+}
+
+#minesweeper-board {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(5, 40px);
+    gap: 2px;
+}
+
+#minesweeper-board div {
+    background: #C0C0C0;
+    border: 1px solid #404040;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#minesweeper-board div.revealed {
+    background: #BDBDBD;
+}
+
