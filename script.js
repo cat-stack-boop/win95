@@ -50,11 +50,14 @@ function createWindow(title) {
     document.getElementById("desktop").appendChild(win);
 
     makeDraggable(win, titleBar);
+    return win;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const startButton = document.getElementById("start-button");
     const startMenu = document.getElementById("start-menu");
+    const programsItem = document.getElementById("menu-programs");
+    const shutdownItem = document.getElementById("menu-shutdown");
 
     function toggleStartMenu() {
         const visible = startMenu.style.display === "block";
@@ -81,6 +84,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    programsItem.addEventListener("click", () => {
+        toggleStartMenu();
+        createWindow("Programs");
+    });
+
+    shutdownItem.addEventListener("click", () => {
+        toggleStartMenu();
+        const shut = createWindow("Shutdown");
+        shut.querySelector(".window-content").textContent = "It's now safe to turn off your computer.";
+    });
+
     const sampleWindow = document.getElementById("window-sample");
     const sampleTitle = sampleWindow.querySelector(".title-bar");
     const sampleClose = sampleWindow.querySelector(".close-button");
@@ -91,13 +105,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const computerIcon = document.getElementById("icon-computer");
     const trashIcon = document.getElementById("icon-trash");
 
-    computerIcon.addEventListener("dblclick", () => createWindow("My Computer"));
-    trashIcon.addEventListener("dblclick", () => createWindow("Recycle Bin"));
+    function openIconWindow(title) {
+        createWindow(title);
+    }
+
+    computerIcon.addEventListener("dblclick", () => openIconWindow("My Computer"));
+    computerIcon.addEventListener("click", () => openIconWindow("My Computer"));
+    trashIcon.addEventListener("dblclick", () => openIconWindow("Recycle Bin"));
+    trashIcon.addEventListener("click", () => openIconWindow("Recycle Bin"));
 
     [computerIcon, trashIcon].forEach((icon) => {
         icon.addEventListener("keydown", (e) => {
             if (e.key === "Enter" || e.key === " ") {
-                icon.dispatchEvent(new Event("dblclick"));
+                icon.click();
             }
         });
     });
