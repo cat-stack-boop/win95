@@ -1,6 +1,7 @@
 # Win95 Desktop
 
-This repository contains a very minimal mock desktop inspired by the look of Windows 95. It is implemented with HTML, CSS and a bit of JavaScript.
+This repository contains a small mock desktop inspired by the look of Windows 95. It is implemented with HTML, CSS and a bit of JavaScript.
+The current version includes draggable desktop icons, a taskbar clock and a simple Minesweeper clone.  All icons are small SVGs stored in the `icons` folder.
 
 To try it out, open `index.html` in a web browser.
 

@@ -184,4 +184,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('menu-minesweeper').addEventListener('click', () => { toggleStartMenu(); openApp('minesweeper'); });
 
     initMinesweeper();
+
+    // make desktop icons draggable
+    document.querySelectorAll('.icon').forEach(icon => {
+        makeDraggable(icon, icon);
+        icon.addEventListener('mousedown', () => bringToFront(icon));
+    });
+
+    // taskbar clock
+    const clockEl = document.getElementById('taskbar-clock');
+    function updateClock() {
+        const now = new Date();
+        clockEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
 });
