@@ -18,18 +18,62 @@
             <figcaption>Recycle Bin</figcaption>
         </figure>
 
+        <figure id="icon-notepad" class="icon" tabindex="0" role="button">
+            <img src="mycomputer.svg" alt="Notepad icon" width="32" height="32">
+            <figcaption>Notepad</figcaption>
+        </figure>
+        <figure id="icon-minesweeper" class="icon" tabindex="0" role="button">
+            <img src="mycomputer.svg" alt="Minesweeper icon" width="32" height="32">
+            <figcaption>Minesweeper</figcaption>
+        </figure>
+
         <div id="window-sample" class="window" style="top:100px; left:100px;">
-            <div class="title-bar">Sample Window <button class="close-button" aria-label="Close window">X</button></div>
+            <div class="title-bar">
+                Sample Window
+                <div class="window-controls">
+                    <button class="minimize-button" aria-label="Minimize window">_</button>
+                    <button class="close-button" aria-label="Close window">X</button>
+                </div>
+            </div>
             <div class="window-content">Welcome to Win95!</div>
+        </div>
+
+        <div id="window-notepad" class="window" style="display:none; top:120px; left:120px;">
+            <div class="title-bar">
+                Notepad
+                <div class="window-controls">
+                    <button class="minimize-button" aria-label="Minimize window">_</button>
+                    <button class="close-button" aria-label="Close window">X</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <textarea style="width:100%; height:100%;"></textarea>
+            </div>
+        </div>
+
+        <div id="window-minesweeper" class="window" style="display:none; width:220px; height:260px; top:140px; left:140px;">
+            <div class="title-bar">
+                Minesweeper
+                <div class="window-controls">
+                    <button class="minimize-button" aria-label="Minimize window">_</button>
+                    <button class="close-button" aria-label="Close window">X</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div id="minesweeper-board"></div>
+            </div>
         </div>
     </div>
     <div id="start-menu" role="menu" aria-hidden="true">
         <div id="menu-programs" class="menu-item" role="menuitem">Programs</div>
+        <div id="menu-notepad" class="menu-item" role="menuitem">Notepad</div>
+        <div id="menu-minesweeper" class="menu-item" role="menuitem">Minesweeper</div>
         <div id="menu-shutdown" class="menu-item" role="menuitem">Shutdown</div>
 
     </div>
     <div id="taskbar">
         <button id="start-button" aria-haspopup="true" aria-controls="start-menu">Start</button>
+        <div id="taskbar-apps"></div>
     </div>
     <script src="script.js"></script>
 </body>
