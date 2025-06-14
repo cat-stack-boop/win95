@@ -1,7 +1,9 @@
 body {
     margin: 0;
     font-family: 'MS Sans Serif', Tahoma, sans-serif;
-    background: #008080;
+    background-color: #008080;
+    background-image: repeating-linear-gradient(45deg, rgba(0,128,128,0.5) 0, rgba(0,128,128,0.5) 2px, rgba(0,120,120,0.5) 2px, rgba(0,120,120,0.5) 4px);
+    background-size: 8px 8px;
 }
 
 #desktop {
@@ -14,12 +16,12 @@ body {
 }
 
 .icon {
+    position: absolute;
     width: 80px;
     height: 70px;
     color: #000;
     background: #C0C0C0;
     text-align: center;
-    margin-bottom: 10px;
     border: 2px solid #fff;
     border-bottom-color: #404040;
     border-right-color: #404040;
@@ -27,6 +29,7 @@ body {
     padding-top: 8px;
     cursor: pointer;
     font-size: 12px;
+    user-select: none;
 }
 
 .icon:focus {
@@ -172,6 +175,14 @@ body {
     height: 100%;
     align-items: center;
     overflow: hidden;
+}
+
+#taskbar-clock {
+    width: 60px;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 6px;
+    user-select: none;
 }
 
 .taskbar-app {
