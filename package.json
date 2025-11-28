@@ -10,6 +10,9 @@
   "author": "",
   "license": "MIT",
   "type": "commonjs",
+  "overrides": {
+    "node-forge": "^1.3.2"
+  },
   "devDependencies": {
     "http-server": "^14.1.1"
   }
